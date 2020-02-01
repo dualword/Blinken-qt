@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.blinken.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Blinken</name>
+  <name xml:lang="bs">Blinken</name>
+  <name xml:lang="ca">Blinken</name>
+  <name xml:lang="ca-valencia">Blinken</name>
+  <name xml:lang="cs">Blinken</name>
+  <name xml:lang="da">Blinken</name>
+  <name xml:lang="de">Blinken</name>
+  <name xml:lang="en-GB">Blinken</name>
+  <name xml:lang="es">Blinken</name>
+  <name xml:lang="et">Blinken</name>
+  <name xml:lang="fi">Blinken</name>
+  <name xml:lang="fr">Blinken</name>
+  <name xml:lang="gl">Blinken</name>
+  <name xml:lang="hi">ब्लिंकेन </name>
+  <name xml:lang="id">Blinken</name>
+  <name xml:lang="it">Blinken</name>
+  <name xml:lang="lt">Blinken</name>
+  <name xml:lang="nds">Blinken</name>
+  <name xml:lang="nl">Blinken</name>
+  <name xml:lang="nn">Blinken</name>
+  <name xml:lang="pl">Blinken</name>
+  <name xml:lang="pt">Blinken</name>
+  <name xml:lang="pt-BR">Blinken</name>
+  <name xml:lang="ru">Blinken</name>
+  <name xml:lang="sk">Blinken</name>
+  <name xml:lang="sl">Blinken</name>
+  <name xml:lang="sv">Blinken</name>
+  <name xml:lang="tr">Blinken</name>
+  <name xml:lang="uk">Blinken</name>
+  <name xml:lang="x-test">xxBlinkenxx</name>
+  <name xml:lang="zh-CN">Blinken</name>
+  <name xml:lang="zh-TW">記憶_BlinKen</name>
+  <summary>Memory Enhancement Game</summary>
+  <summary xml:lang="bs">Igra za poboljšanje pamćenja</summary>
+  <summary xml:lang="ca">Un joc per millorar la memòria</summary>
+  <summary xml:lang="ca-valencia">Un joc per millorar la memòria</summary>
+  <summary xml:lang="cs">Hra k procvičování paměti</summary>
+  <summary xml:lang="da">Spil til hukommelsestræning</summary>
+  <summary xml:lang="de">Spiel zum Gedächtnistraining</summary>
+  <summary xml:lang="en-GB">Memory Enhancement Game</summary>
+  <summary xml:lang="es">Juego para la mejora de la memoria</summary>
+  <summary xml:lang="et">Mälu parandamise mäng</summary>
+  <summary xml:lang="fi">Muistipeli</summary>
+  <summary xml:lang="fr">Jeu pour améliorer la mémoire</summary>
+  <summary xml:lang="gl">Xogo para mellorar a memoria</summary>
+  <summary xml:lang="hi">दिमाग बढाने वाला खेल</summary>
+  <summary xml:lang="id">Permainan Melatih Ingatan</summary>
+  <summary xml:lang="it">Gioco per esercitare la memoria</summary>
+  <summary xml:lang="lt">Atminties gerinimo žaidimas</summary>
+  <summary xml:lang="nds">Speel för't Verbetern vun't Behollen</summary>
+  <summary xml:lang="nl">Geheugenoefenspel</summary>
+  <summary xml:lang="nn">Hugsetreningsspel</summary>
+  <summary xml:lang="pl">Gra na ćwiczenie pamięci</summary>
+  <summary xml:lang="pt">Jogo de Exercícios de Memória</summary>
+  <summary xml:lang="pt-BR">Jogo para desenvolvimento da memória</summary>
+  <summary xml:lang="ru">Игра для развития памяти</summary>
+  <summary xml:lang="sk">Hra na zlepšenie pamäte</summary>
+  <summary xml:lang="sl">Igra za izboljšanje spomina</summary>
+  <summary xml:lang="sv">Minnesförbättringsspel</summary>
+  <summary xml:lang="tr">Bellek Geliştirme Oyunu</summary>
+  <summary xml:lang="uk">Гра для розвитку пам'яті</summary>
+  <summary xml:lang="x-test">xxMemory Enhancement Gamexx</summary>
+  <summary xml:lang="zh-CN">记忆强化游戏</summary>
+  <summary xml:lang="zh-TW">加強記憶力的遊戲</summary>
+  <description>
+    <p>Blinken is based on an electronic game released in 1978, which challenges players to remember sequences of increasing length. On the face of the device, there are 4 different color buttons, each one with their own distinctive sound. These buttons light up randomly, creating the sequence that the player must then recall. If the player is successful in remembering the sequence of lights in the correct order, they advance to the next stage, where an identical sequence with one extra step is presented. If they are incorrect, the game is lost, and the player must start again from the beginning. The goal is to get a high score - each step in the sequence is worth one point, so correct entry of a sequence of 8 lights is worth 8 points on the high score table.</p>
+    <p xml:lang="bs">Blinken je zasnovan na elektronskoj igri objavljenoj 1978. godine, kojom se izaziva igrače da se sjete sekvenci povećavane dužine. Na licu uređaja, postoje 4 različite boje dugmadi, svaki sa svojom prepoznatljivim zvukom. Ovi tasteri svijetle nasumice, stvarajući sekvencu da igrač mora onda se sjeti. Ako igrač uspije u pamćenju sekvenci svjetla u ispravnom redosledu, on prelazi na sljedeću fazu, u kojoj je predstavljena identična sekvenca sa pomoćnim koraomk. Ako su neispravni, igra je izgubljena, a igrač mora ponovo početi iz početka. Cilj je dobizi visok rezultat - svaki korak u nizu vrijedi jedan bod, tako da tačan slijed od 8 svjetala vrijedi 8 poena na tabeli rezultata.</p>
+    <p xml:lang="ca">El Blinken es basa en un joc electrònic llançat el 1978, desafia als jugadors a recordar seqüències incrementant-les cada vegada. A la cara del dispositiu hi ha 4 botons de colors diferents, cadascun amb el seu propi so distintiu. Aquests botons s'encenen a l'atzar, creant la seqüència que el jugador ha de recordar. Si el jugador té èxit recordant la seqüència de llums en l'ordre correcte, avançarà a la següent etapa, on se li presentarà una seqüència idèntica amb un pas addicional. Si són incorrectes, es perdrà en el joc, i el jugador haurà de començar de nou des del començament. L'objectiu és aconseguir una alta puntuació: cada pas en la seqüència val un punt, de manera que encertar una seqüència de 8 llums valdrà 8 punts a la taula de puntuació.</p>
+    <p xml:lang="ca-valencia">El Blinken es basa en un joc electrònic llançat el 1978, desafia als jugadors a recordar seqüències incrementant-les cada vegada. A la cara del dispositiu hi ha 4 botons de colors diferents, cadascun amb el seu propi so distintiu. Aquests botons s'encenen a l'atzar, creant la seqüència que el jugador ha de recordar. Si el jugador té èxit recordant la seqüència de llums en l'ordre correcte, avançarà a la següent etapa, on se li presentarà una seqüència idèntica amb un pas addicional. Si són incorrectes, es perdrà en el joc, i el jugador haurà de començar de nou des del començament. L'objectiu és aconseguir una alta puntuació: cada pas en la seqüència val un punt, de manera que encertar una seqüència de 8 llums valdrà 8 punts a la taula de puntuació.</p>
+    <p xml:lang="de">Die Idee zu Blinken gründet auf einem alten elektronischen Spiel aus dem Jahre 1978: der Spieler musste sich immer länger werdende Tasten- bzw. Tonfolgen merken. Auf dem Spielgerät von Blinken finden Sie vier verschiedenfarbige Knöpfe und jeder hat seinen eigenen individuellen Ton. Während des Spiels leuchten diese Knöpfe in zufälliger Reihenfolge, die der Spieler sich merken und wiederholen muss. Wenn der Spieler es schafft, die Sequenz in der richtigen Reihenfolge wiederzugeben, erreicht er die nächste Spielstufe, in der er die gleiche Sequenz plus einer weiteren Taste wiedergeben muss. Wenn die Reihenfolge einmal falsch ist, hat der Spieler verloren und muss von vorne beginnen. Das Ziel des Spiels ist es, möglichst viele Punkte zu erreichen. Jede erfolgreiche Runde bringt einen Punkt, eine erfolgreiche Folge von 8 Knöpfen ergibt also 8 Punkte in der Bestenliste.</p>
+    <p xml:lang="en-GB">Blinken is based on an electronic game released in 1978, which challenges players to remember sequences of increasing length. On the face of the device, there are 4 different colour buttons, each one with their own distinctive sound. These buttons light up randomly, creating the sequence that the player must then recall. If the player is successful in remembering the sequence of lights in the correct order, they advance to the next stage, where an identical sequence with one extra step is presented. If they are incorrect, the game is lost, and the player must start again from the beginning. The goal is to get a high score - each step in the sequence is worth one point, so correct entry of a sequence of 8 lights is worth 8 points on the high score table.</p>
+    <p xml:lang="es">Blinken se basa en un juego electrónico publicado en 1978 que reta a los jugadores a recordar secuencias de una longitud cada vez mayor. En la parte superior del dispositivo, hay cuatro botones de diferentes colores, cada uno con su propio sonido. Dichos botones se encienden de manera aleatoria, creando una secuencia que el jugador debe recordar. Si el jugador consigue recordar la secuencia de luces en el orden correcto, avanzan hasta la siguiente fase, en la que se muestra una secuencia idéntica, pero con un paso más. Si el jugador se equivoca, pierde la partida y tiene que empezar de nuevo desde el principio. El objetivo es obtener la mayor puntuación; cada paso en la secuencia vale un punto, así que si se aciertan todos los pasos de una secuencia de ocho luces, se obtienen ocho puntos en la tabla de mejores puntuaciones.</p>
+    <p xml:lang="et">Blinkeni eeskujuks on 1978. aastal ilmavalgust näinud elektrooniline mäng, milles mängijad peavad meeles pidama aina pikemaks muutuvaid jadasid. Seadme esiküljel on neli erinevat värvi nuppu, igaüks omaenda heliga. Need löövad juhuslikus järjekorras heledaks, tekitades jada, mille mängija peab meelde jätma. Kui mängija suudab valgusjada õiges järjekorras meelde jätta, suundub ta järgmisele tasemele, kus teda ootab ees samasugune, kuid ühe liikme võrra pikem jada. Kui järjekord jääb valesti meelde, on mäng kaotatud ning tuleb alustada taas algusest. Eesmärk on mõistagi saavutada rekord. Jada iga samm on ühe punkti vääriline, nii et näiteks 8 sammust koosneva jada korrektne meeldejätmine teenib 8 punkti.</p>
+    <p xml:lang="fi">Blinken perustuu vuonna 1978 julkaistuun elektroniseen peliin, joka haastaa pelaajat muistamaan aina vain pidempiä sarjoja. Laitteessa on neljä eriväristä painiketta, joista jokainen pitää myös eri ääntä. Satunnaisesti syttyvät painikkeet muodostavat sarjan, joka pelaajan täytyy muistaa. Jos pelaaja muistaa valojen oikean järjestyksen, hän pääsee seuraavalle tasolle, jossa samaisen sarjan loppuun on lisätty yksi valo lisää. Jos pelaaja tekee virheen, peli on hävitty ja hänen tarvitsee aloittaa alusta. Tavoitteena on saada mahdollisimman paljon pisteitä; jokaisesta sarjan askeleesta saa yhden pisteen eli kahdeksan valoa sisältävän sarjan muistamisesta saa kahdeksan pistettä.</p>
+    <p xml:lang="fr">Blinken s'inspire d'un jeu électronique sorti en 1978 qui proposait aux joueurs de mémoriser des séquences de plus en plus longues. Sur l'appareil figuraient 4 boutons de couleurs différentes, chacun associé à un son différent. Ces boutons s'allumaient selon un ordre aléatoire, créant ainsi une séquence dont le joueur devait se rappeler. Si le joueur réussit à rejouer la séquence dans l'ordre, celle-ci est augmentée d'une étape. Sinon la partie est perdue et il faut recommencer du début. Le but est d'atteindre le score le plus élevé – chaque étape de la séquence vaut un point ; par exemple, rejouer correctement une séquence de 8 couleurs rapporte 8 points.</p>
+    <p xml:lang="gl">Blinken está baseado nun xogo electrónico lanzado en 1978 que reta os xogadores a lembraren secuencias de lonxitude cada vez maior. Na fronte do dispositivo hai catro botóns de distintas cores, cada un co seu son distintivo. Estes botóns ilumínanse aleatoriamente, creando a secuencia que o xogador debe lembrar. Se o xogador ten éxito ao lembrar a secuencia de luces na orde correcta, avanza ao seguinte nivel, onde se lle presenta unha secuencia idéntica cun paso máis. Se non acerta, perde o xogo e deberá comezar de novo desde o principio. O obxectivo é obter moitos puntos - cada paso na secuencia vale un punto, polo que a introdución correcta dunha secuencia de oito luces vale oito puntos na táboa de puntuacións.</p>
+    <p xml:lang="id">Blinken didasarkan pada permainan elektronik yang dirilis pada tahun 1978, yang menantang pemain untuk mengingat urutan peningkatan panjang. Di muka perangkat, ada 4 tombol warna yang berbeda, masing-masing dengan suara khas mereka sendiri. Tombol-tombol ini menyala secara acak, menciptakan urutan yang harus diingat oleh pemain. Jika pemain berhasil mengingat urutan lampu dalam urutan yang benar, mereka maju ke tahap selanjutnya, di mana urutan identik dengan satu langkah tambahan disajikan. Jika mereka salah, permainan hilang, dan pemain harus memulai lagi dari awal. Tujuannya adalah untuk mendapatkan skor tinggi - setiap langkah dalam urutan bernilai satu poin, jadi entri yang benar dari urutan 8 lampu bernilai 8 poin di tabel skor tinggi.</p>
+    <p xml:lang="it">Blinken è basato su un gioco elettronico venduto a partire dal 1978, che sfida i giocatori a ricordare sequenze di lunghezza via via crescente. Sulla parte frontale del dispositivo ci sono quattro differenti pulsanti colorati, ciascuno con un suono distintivo. Questi pulsanti si accendono in modo casuale, creando una sequenza che il giocatore deve ricordare. Se il giocatore riesce a ricordare la sequenza di luci nel corretto ordine, allora avanza al livello successivo, dove vi è una sequenza identica alla precedente ma con un elemento in più. Se la sequenza non è corretta, la partita è persa e il giocatore deve ricominciare dall'inizio. Lo scopo è di ottenere uno dei punteggi migliori - ogni elemento nella sequenza da' un punto, e per questo una sequenza di otto luci vale otto punti nella classifica.</p>
+    <p xml:lang="nds">Blinken buut op en Speel, dat 1978 rutkeem, bi dat een Folgen mit wassen Längde behollen mutt. Op de Böversiet vun en Reedschap gifft dat veer Klöörknööp, de ok besünner Klang tohöört. De Knööp blinkt in en tofällig reeg, un disse Reeg mutt de Speler sik marken. Gifft he de Reeg richtig wedder, kummt he en Stoop wieder. Dor warrt de Reeg denn en Schritt toföögt. Man kriggt he dat nich torecht, verleert he dat Speel, un he mutt wedder vörn anfangen. Dat Teel vun't Speel is, en Hööchstpunkttall to kriegen. För elkeen Schritt binnen de Reeg gifft dat een Punkt. För en richtig weddergeven Reeg mit 8 Schreed gifft dat also 8 Pünkt.</p>
+    <p xml:lang="nl">Blinken is gebaseerd op een elektronisch spelletje uit 1978, waarin de spelers steeds langere reeksen moeten onthouden. Op het apparaat zijn 4 verschillend gekleurde knoppen aanwezig, elk met een eigen geluid. Deze knoppen lichten op in een willekeurige volgorde, waarmee een reeks wordt gemaakt, die de speler moet onthouden. Als de speler erin slaagt zich de reeks te herinneren, in de juiste volgorde, gaat hij/zij naar het volgende niveau, waar een soortgelijke reeks, maar een stap langer, wordt aangeboden. Indien dit niet lukt, heeft hij/zij het spel verloren, en moet hij/zij weer helemaal van voren af aan beginnen. Het doel is een hoge score te behalen - elke stap in de reeks is een punt waard, dus een goede invoer van een reeks van 8 lichtjes is 8 punten waard op de tabel van de hoogste scores.</p>
+    <p xml:lang="pl">Blinken wywodzi się z elektronicznej gry powstałej w 1978 roku, w której gracze mają za zadanie zapamiętać coraz dłuższe sekwencje. Z przodu urządzenia są cztery różnokolorowe przyciski, każdy wydający dźwięk odmienny od pozostałych. Przyciski zapalają się w sposób losowy, tworząc w ten sposób sekwencję, którą gracz musi zapamiętać. Jeśli gracz poprawnie powtórzy całą sekwencję, wówczas przechodzi do następnego etapu, w którym ta sama sekwencja jest powiększona o kolejny krok. Jeżeli gracz popełni błąd, wówczas przegrywa i musi rozpocząć grę od nowa. Celem gry jest osiągnięcie najlepszego wyniku, a każdy krok w sekwencji to jeden punkt, więc poprawne powtórzenie kolejności 8 zapaleń daje 8 punktów w tabeli najlepszych wyników.</p>
+    <p xml:lang="pt">O Blinken baseia-se num jogo electrónico lançado em 1978, que desafia os jogadores a recordarem sequências de tamanho cada vez maior. Na face do dispositivo, existem 4 botões de cores diferentes, cada um com o seu som distinto. Estes botões iluminam-se aleatoriamente, criando a sequência que o jogador deverá então recordar. Se o jogador for bem-sucedido a recordar a sequência de luzes pela ordem correcta, passará então à etapa seguinte, onde será apresentada uma sequência idêntica com um passo extra. Se for uma sequência incorrecta, perde o jogo e o jogador terá de começar do início. O objectivo é bater um recorde - cada passo na sequência vale um ponto, pelo que a introdução correcta de uma sequência de 8 luzes vale 8 pontos para a tabela de recordes.</p>
+    <p xml:lang="pt-BR">Blinken é baseado num jogo eletrônico lançado em 1978, que desafia os jogadores a lembrar sequências de comprimento crescentes. Na face do dispositivo existem 4 botões coloridos diferentes, cada um com seu próprio som. Esses botões iluminam-se aleatoriamente, criando uma sequência que o jogador deverá repetir. Se o jogador conseguir lembrar a sequência das luzes na ordem correta, ele avança para o próximo estágio, onde uma sequência idêntica com um passo a mais é apresentada. Se ela estiver incorreta, o jogo termina e o jogador deverá iniciar novamente desde o começo. O objetivo é obter um recorde - cada passo na sequência equivale a um ponto, portanto lembrar a sequência correta de 8 luzes equivale a 8 pontos na tabela de recordes.</p>
+    <p xml:lang="ru">Blinken основана на электронной игре, выпущенной в 1978, в которой игрок должен был запоминать последовательности увеличивающийся длины. На передней панели устройства находились 4 кнопки различных цветов, каждой из которых соответствовал определённый звук. Кнопки зажигались в случайной последовательности и задача игрока состояла в том, чтобы повторить её. Если игрок правильно воспроизводил последовательность, он переходил на следующий уровень - к последовательности добавлялся ещё один элемент. Если игрок ошибался, он проигрывал, и должен был начинать игру сначала. Целью игры - получение максимального количества очков. Каждый элемент последовательности даёт одно очко, так что правильно воспроизведенная последовательность из 8 элементов даёт 8 очков.</p>
+    <p xml:lang="sk">Blinken je založený na elektronickej hre z roku 1978, ktorá vyžaduje od hráčov, aby si zapamätali sekvencie zvyšujúcej sa dĺžky. Na zariadení sú 4 rôznofarebné tlačidlá, každé so svojim vlastným zvukom. Tieto tlačidlá sa náhodne rozsvecujú, čím vytvárajú sekvenciu, ktorú si hráč musí zapamätať. Ak je hráč úspešný, postúpi na ďalšiu úroveň, kde sú rovnaké sekvencie s jedným ďalším krokom. Ak je neúspešný, hra je stratená a hráč musí začať od začiatku. Cieľom je dosiahnuť čo najviac bodov, každý krok v sekvencii je za jeden bod, teda správny vstup sekvencie s 8 svetlami je za 8 bodov.</p>
+    <p xml:lang="sl">Blinken temelji na elektronski igri izšli leta 1978, ki od igralca zahteva, da si zapomni vedno daljša zaporedja. Na prednji strani naprave so štirje različno obarvani gumbi, ki oddajajo različne zvoke. Gumbi se naključno osvetlijo in to zaporedje mora igralec ponoviti. Če igralec uspešno ugane pravilni vrstni red luči v zaporedju, preide na naslednji nivo, kjer je pred njega postavljeno enako zaporedje, le da ima dodan en korak več. Če igralec zaporedja ne ugane, se igra konča in začne znova. Cilj igre je doseči najvišji rezultat. Vsak korak v zaporedju je vreden eno točko, zato je npr. pravilno vneseno zaporedje 8 luči vredno 8 točk.</p>
+    <p xml:lang="sv">Blinken är baserat på ett elektroniskt spel, utgivet 1978, som utmanar spelare att komma ihåg sekvenser av ökande längd. På apparatens framsida finns fyra olika färgade knappar, var och en med ett eget karakteristiskt ljud. De fyra knapparna lyser upp slumpmässigt, och skapar sekvensen som spelaren därefter måste komma ihåg. Om spelaren lyckas komma ihåg sekvensen av ljus i rätt ordning, går han vidare till nästa nivå, där en identisk sekvens med ytterligare ett steg presenteras. Om spelaren har fel, förloras spelet, och spelaren måste börja om från början igen. Målet är att få högsta poäng: Varje steg i sekvensen är värt ett poäng, och att skriva in en sekvens med åtta ljus är alltså värt 8 poäng i tabellen med högsta poäng.</p>
+    <p xml:lang="tr">Blinken, 1978'de geliştirilen oyuncuların artan uzunluktaki dizileri hatırlamaya zorlayan bir elektronik oyununa dayanmaktadır. Aygıtın yüzünde her birinin kendi ayırt edici sesi olan 4 farklı renkte düğme vardır. Bu düğmeler kullanıcının daha sonra hatırlaması gereken bir sırayla rasgele yanarlar. Eğer oyuncu bu sıralamayı hatırlamakta başarılı olursa aynı sıralamaya bir ilave yapılan bir sonraki aşamaya geçer. Oyuncu başarısız olduğunda oyun biter ve baştan başlamak gerekir. Amaç en yüksek puanı toplamaktır - dizideki her adım bir puan değerindedir, yani 8 ışıklık bir dizi puan tablosunda 8 puan demektir.</p>
+    <p xml:lang="uk">Blinken засновано на електронній грі, випущеній у 1978, у якій гравці мали запам’ятовувати послідовності зі зростаючою довжиною. На передній панелі приладу знаходяться чотири кнопки різних кольорів, кожній з яких відповідає певний звук. Ці кнопки підсвічувалися у певній випадковій послідовності, утворюючи послідовність, яку гравець мав потім відтворити. Якщо гравець запам’ятовував послідовність у правильному порядку, він переходив на наступний рівень гри, де до послідовності додавався ще один додатковий крок. Якщо гравець робив помилку, гра вважалася програною, і гравець мав продовжувати її з початку. Метою гри є отримання максимальної кількості очок — кожен крок послідовності оцінювався у одне очко, отже, правильне введення послідовності з 8 елементів дає 8 залікових очок.</p>
+    <p xml:lang="x-test">xxBlinken is based on an electronic game released in 1978, which challenges players to remember sequences of increasing length. On the face of the device, there are 4 different color buttons, each one with their own distinctive sound. These buttons light up randomly, creating the sequence that the player must then recall. If the player is successful in remembering the sequence of lights in the correct order, they advance to the next stage, where an identical sequence with one extra step is presented. If they are incorrect, the game is lost, and the player must start again from the beginning. The goal is to get a high score - each step in the sequence is worth one point, so correct entry of a sequence of 8 lights is worth 8 points on the high score table.xx</p>
+    <p xml:lang="zh-TW">Blinken 是基於一套 1978 年發行的遊戲而來。該遊戲可以挑戰玩家的記憶力，並不斷增加長度與難度。一開始，有四個不同顏色的按鈕，每個鈕有自己不同的聲音。這些按鈕會隨機亮起，產生一組讓玩家記憶的序列。如果玩家成功記住這樣的序列順序，則可以進到下一關。若是失敗，則要從頭開始。得分越高越好。</p>
+  </description>
+  <url type="homepage">http://edu.kde.org/blinken/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=blinken</url>
+  <url type="help">http://docs.kde.org/stable/en/kdeedu/blinken/index.html</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=blinken&amp;source=appdata</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Playing Blinken</caption>
+      <caption xml:lang="ca">Jugant al Blinken</caption>
+      <caption xml:lang="ca-valencia">Jugant al Blinken</caption>
+      <caption xml:lang="cs">Hraní Blinken</caption>
+      <caption xml:lang="de">Blinken spielen</caption>
+      <caption xml:lang="en-GB">Playing Blinken</caption>
+      <caption xml:lang="es">Jugando a Blinken</caption>
+      <caption xml:lang="fr">Partie de Blinken en cours</caption>
+      <caption xml:lang="gl">Xogando a Blinken</caption>
+      <caption xml:lang="id">Memainkan Blinken</caption>
+      <caption xml:lang="it">Giocare con Blinken</caption>
+      <caption xml:lang="nl">Blinken spelen</caption>
+      <caption xml:lang="pl">Granie w Blinken</caption>
+      <caption xml:lang="pt">A jogar ao Blinken</caption>
+      <caption xml:lang="pt-BR">Jogando Blinken</caption>
+      <caption xml:lang="sv">Spela Blinken</caption>
+      <caption xml:lang="uk">Гра у Blinken</caption>
+      <caption xml:lang="x-test">xxPlaying Blinkenxx</caption>
+      <caption xml:lang="zh-CN">正在玩 Blinken</caption>
+      <caption xml:lang="zh-TW">BlinKen 遊玩畫面</caption>
+      <image>http://kde.org/images/screenshots/blinken.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>blinken</binary>
+  </provides>
+  <releases>
+    <release version="19.12.1" date="2020-01-09"/>
+    <release version="19.12.0" date="2019-12-12"/>
+  </releases>
+</component>
