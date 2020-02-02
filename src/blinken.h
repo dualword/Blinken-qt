@@ -10,19 +10,22 @@
 #ifndef BLINKEN_H
 #define BLINKEN_H
 
+#include <QMainWindow>
+#include <QStandardPaths>
+
 #include <QMap>
-#include <kmainwindow.h>
+//#include <kmainwindow.h>
 
 #include "blinkengame.h"
 
 class QSvgRenderer;
 class QTimer;
 
-class KHelpMenu;
+//class KHelpMenu;
 
 class button;
 
-class blinken : public KMainWindow
+class blinken : public QMainWindow
 {
 Q_OBJECT
 	public:
@@ -91,7 +94,7 @@ Q_OBJECT
 		
 		blinkenGame m_game;
 		
-		KHelpMenu *m_helpMenu;
+		//KHelpMenu *m_helpMenu;
 		
 		QSize m_lastSize;
 		QMap<QString, QPixmap> m_pixmapCache;

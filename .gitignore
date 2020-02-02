@@ -1,3 +1,7 @@
+/src/.build/
+/src/blinken-qt
+/Makefile
+/src/Makefile
 
 #eclipse
 /.cproject

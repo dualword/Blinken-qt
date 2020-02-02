@@ -13,7 +13,7 @@
 
 #include <QTimer>
 
-#include <krandom.h>
+//#include <krandom.h>
 #include "soundsplayer.h"
 
 blinkenGame::blinkenGame() : m_phase(starting)
@@ -156,7 +156,7 @@ blinkenGame::color blinkenGame::generateColor()
 	// make the compiler happy :-D
 	color c = none;
 
-	r = 1 + (int)(4.0 * KRandom::random() / (RAND_MAX + 1.0));
+	r = 1 ; //+ (int)(4.0 * KRandom::random() / (RAND_MAX + 1.0));
 	switch(r)
 	{
 		case 1:
