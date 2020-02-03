@@ -3,6 +3,6 @@ Blinken-qt - Qt port of KDE game [Blinken](https://kde.org/applications/educatio
 [Wikipedia article](https://en.wikipedia.org/wiki/Simon_%28game%29) about electronic game.
 
 License: GNU General Public License  
-Source code: http://github.com/dualword/blinken-qt/  
+Source code: http://github.com/dualword/Blinken-qt/  
 
 ![Screenshot](screenshot.png)

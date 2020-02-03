@@ -25,9 +25,9 @@ soundsPlayer::soundsPlayer()
 //	m_redSound = QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("sounds/2.wav"));
 //	m_blueSound = QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("sounds/3.wav"));
 //	m_yellowSound = QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("sounds/4.wav"));
-//
-//	connect(&m_warnTimer, &QTimer::timeout, this, &soundsPlayer::ended);
-//	m_warnTimer.setSingleShot(true);
+
+	connect(&m_warnTimer, &QTimer::timeout, this, &soundsPlayer::ended);
+	m_warnTimer.setSingleShot(true);
 }
 
 soundsPlayer::~soundsPlayer()
@@ -72,7 +72,7 @@ void soundsPlayer::play(blinkenGame::color c)
 //	}
 //	else
 //	{
-//		m_warnTimer.start(250);
+		m_warnTimer.start(250);
 //	}
 }
 

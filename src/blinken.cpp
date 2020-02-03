@@ -43,7 +43,8 @@ static const double nonButtonRibbonY = 125.0;
 
 blinken::blinken() : m_overHighscore(false), m_overQuit(false), m_overCentralText(false), m_overMenu(false), m_overAboutKDE(false), m_overAboutBlinken(false), m_overSettings(false), m_overManual(false), m_overCentralLetters(false), m_overCounter(false), m_overFont(false), m_overSound(false), m_showPreferences(false), m_updateButtonHighlighting(false), m_highlighted(blinkenGame::none)
 {
-	m_renderer = new QSvgRenderer(QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("images/blinken.svg")));
+	//m_renderer = new QSvgRenderer(QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("images/blinken.svg")));
+	m_renderer = new QSvgRenderer(QStringLiteral("./images/blinken.svg"));
 	
 	m_buttons[0] = new button(blinkenGame::blue);
 	m_buttons[1] = new button(blinkenGame::yellow);
@@ -225,7 +226,7 @@ void blinken::paintEvent(QPaintEvent *)
 	switch (m_game.phase())
 	{
 		case blinkenGame::starting:
-			drawText(p, tr("@action:button Start a new game", "Start"), QPointF(aux1, aux2), true, aux3, aux4, &m_centralTextRect, m_overCentralText, true);
+			drawText(p, tr("Start a new game", "Start"), QPointF(aux1, aux2), true, aux3, aux4, &m_centralTextRect, m_overCentralText, true);
 		break;
 		
 		case blinkenGame::choosingLevel:
@@ -415,7 +416,7 @@ void blinken::checkHS()
 	if (hsm.scoreGoodEnough(m_game.level(), m_game.score()))
 	{
 		bool ok;
-		const QString name = QInputDialog::getText(this, tr("Enter Your Name"), tr("@label:textbox refers to the user's name", "Name:"), QLineEdit::Normal, m_lastName, &ok);
+		const QString name = QInputDialog::getText(this, tr("Enter Your Name"), tr("refers to the user's name", "Name:"), QLineEdit::Normal, m_lastName, &ok);
 		if (!name.isNull() && ok)
 		{
 			m_lastName = name;
@@ -693,14 +694,14 @@ void blinken::drawStatusText(QPainter &p)
 
 	QString restartText = tr("Restart the game");
 	QString text;
-	if (m_overQuit) text = tr("Quit Blinken"); //i18n("Quit Blinken");
+	if (m_overQuit) text = tr("Quit Blinken");
 	else if (m_overHighscore || m_overCounter) text = tr("View Highscore Table");
 //	else if (m_overAboutBlinken || m_overCentralLetters) text = m_helpMenu->action( KHelpMenu::menuAboutApp )->text().remove(QLatin1Char('&'));
 //	else if (m_overAboutKDE) text = m_helpMenu->action( KHelpMenu::menuAboutKDE )->text().remove(QLatin1Char('&'));
 	else if (m_overSettings)
 	{
 		if (!m_showPreferences) text = tr("Show Settings");
-		else text = tr("Hide Settings"); //i18n("Hide Settings");
+		else text = tr("Hide Settings");
 	}
 //	else if (m_overManual) text = m_helpMenu->action( KHelpMenu::menuHelpContents )->text().remove(QLatin1Char('&'));
 	else if (m_overLevels[0]) text = tr("2nd Level");
@@ -808,7 +809,7 @@ void blinken::drawLevel(QPainter &p)
 	
 	double posX = (double)width() / 2.0;
 	double posY = (double)height() / 1.868;
-	drawText(p, tr("@label:chooser which level is currently being played", "Level"), QPointF(posX, posY), false, 0, 0, nullptr, false, true);
+	drawText(p, tr("which level is currently being played", "Level"), QPointF(posX, posY), false, 0, 0, nullptr, false, true);
 	
 	QPointF cp;
 	for (int i = 0; i < 3; i++)

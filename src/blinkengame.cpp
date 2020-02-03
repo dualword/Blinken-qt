@@ -156,7 +156,8 @@ blinkenGame::color blinkenGame::generateColor()
 	// make the compiler happy :-D
 	color c = none;
 
-	r = 1 ; //+ (int)(4.0 * KRandom::random() / (RAND_MAX + 1.0));
+	r = 1 + rand() % 4;
+
 	switch(r)
 	{
 		case 1:
