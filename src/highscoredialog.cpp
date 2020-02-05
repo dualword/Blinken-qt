@@ -1,3 +1,4 @@
+/* Blinken-qt (2020) http://github.com/dualword/Blinken-qt License:GNU GPL*/
 /***************************************************************************
  *   Copyright (C) 2005-2006 by Albert Astals Cid <aacid@kde.org>          *
  *                                                                         *
@@ -16,19 +17,13 @@
 #include <QTabWidget>
 #include <QVBoxLayout>
 
-//#include <kconfig.h>
-//#include <kfontutils.h>
-//#include <klocalizedstring.h>
-//#include <ksharedconfig.h>
-
 #include "counter.h"
-//#include "settings.h"
 
 static const int margin = 15;
 static const int smallMargin = 5;
 static const int namesFontSize = 25;
 
-//static QSet<highScoreManager *> s_allHSM;
+static QSet<highScoreManager *> s_allHSM;
 
 /* scoresWidget */
 
@@ -67,9 +62,9 @@ void scoresWidget::paintEvent(QPaintEvent *)
 	
 	p.setPen(Qt::black);
 	
-//	if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
+	f = QFont(":/steve.ttf");
 	p.setFont(f);
-//	f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
+	f.setPointSize(15);
 	p.setFont(f);
 	
 	p.translate(margin, margin);
@@ -96,9 +91,9 @@ QSize scoresWidget::calcSize()
 	QPainter p(&dummyPixmap);
 	QFont f;
 	
-//	if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
+	f = QFont(":/steve.ttf");
 	p.setFont(f);
-//	f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
+	f.setPointSize(25);
 	p.setFont(f);
 	for (int i = 0; i < 3; i++)
 	{
@@ -174,18 +169,18 @@ void highScoreDialog::showLevel(int level)
 
 highScoreManager::highScoreManager()
 {
-//	s_allHSM << this;
+	s_allHSM << this;
 	update();
 }
 
 highScoreManager::~highScoreManager()
 {
-//	s_allHSM.remove(this);
+	s_allHSM.remove(this);
 }
 
 bool highScoreManager::scoreGoodEnough(int level, int score)
 {
-	level--;
+	if(m_scores[--level].empty()) return true;
 	QList< QPair<int, QString> >::iterator it, itEnd;
 	it = m_scores[level].begin();
 	itEnd = m_scores[level].end();
@@ -196,33 +191,37 @@ bool highScoreManager::scoreGoodEnough(int level, int score)
 
 void highScoreManager::addScore(int level, int score, const QString &name)
 {
-	level--;
-	QList< QPair<int, QString> >::iterator it, itEnd;
-	it = m_scores[level].begin();
-	itEnd = m_scores[level].end();
-	while (it != itEnd && (*it).first >= score) ++it;
-	
-	if (it != itEnd)
-	{
-		m_scores[level].insert(it, qMakePair(score, name));
-		m_scores[level].erase(--m_scores[level].end());
-		
-//		KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("Level%1").arg(level + 1));
-//		int j;
-//		for (it = m_scores[level].begin(), j = 1; it != m_scores[level].end(); ++it, j++)
-//		{
-//			cfg.writeEntry(QStringLiteral("Score%1").arg(j), (*it).first);
-//			cfg.writeEntry(QStringLiteral("Name%1").arg(j), (*it).second);
-//		}
-//		cfg.sync();
+	if(m_scores[--level].empty()){
+		m_scores[level].append(qMakePair(score, name));
+	}else{
+		QList< QPair<int, QString> >::iterator it, itEnd;
+		it = m_scores[level].begin();
+		itEnd = m_scores[level].end();
+		while (it != itEnd && (*it).first >= score) ++it;
 
-//		foreach(highScoreManager *hsm, s_allHSM)
-//		{
-//			if (hsm != this)
-//			{
-//				hsm->update();
-//			}
-//		}
+		if (it != itEnd)
+		{
+			m_scores[level].insert(it, qMakePair(score, name));
+			if(m_scores[level].size() > 5) m_scores[level].erase(--m_scores[level].end());
+		}
+	}
+	
+	QSettings s;
+	s.beginGroup(QStringLiteral("Level%1").arg(level + 1));
+	int j;	
+	for (int i =0;i < m_scores[level].size();i++)
+	{
+		s.setValue(QStringLiteral("Score%1").arg(i+1), m_scores[level].at(i).first);
+		s.setValue(QStringLiteral("Name%1").arg(i+1), m_scores[level].at(i).second);
+	}
+	s.endGroup();
+
+	foreach(highScoreManager *hsm, s_allHSM)
+	{
+		if (hsm != this)
+		{
+			hsm->update();
+		}
 	}
 }
 
@@ -232,14 +231,19 @@ void highScoreManager::update()
 	{
 		m_scores[i].clear();
 	}
-//	for (int i = 1; i <= 3; i++)
-//	{
-//		KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("Level%1").arg(i));
-//		for (int j = 1; j <= 5; j++)
-//		{
-//			m_scores[i-1].append(qMakePair(cfg.readEntry(QStringLiteral("Score%1").arg(j),QVariant(0)).toInt(),cfg.readEntry(QStringLiteral("Name%1").arg(j),QString())));
-//		}
-//	}
+	QSettings s;
+	for (int i = 1; i <= 3; i++)
+	{
+		s.beginGroup(QStringLiteral("Level%1").arg(i));
+		for (int j = 1; j <= 5; j++)
+		{
+			int score = s.value(QStringLiteral("Score%1").arg(j), 0).toInt();
+			QString name = s.value(QStringLiteral("Name%1").arg(j), "").toString();
+			if(score <= 0 || name.trimmed().length() <= 0) continue;
+			m_scores[i-1].append(qMakePair(score,name));
+		}
+		s.endGroup();
+	}
 }
 
 QList< QPair<int, QString> > highScoreManager::scores(int level) const

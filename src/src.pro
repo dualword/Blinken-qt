@@ -3,7 +3,7 @@ TARGET = blinken-qt
 DEPENDPATH += .
 INCLUDEPATH += .
 
-CONFIG += qt thread release
+CONFIG += qt widgets thread release
 QT += svg
 
 QMAKE_CXXFLAGS += -std=c++11
@@ -25,6 +25,7 @@ SOURCES += main.cpp \
            number.cpp \
            soundsplayer.cpp
 
+RESOURCES   = app.qrc
 OBJECTS_DIR = .build/obj
 MOC_DIR     = .build/moc
 RCC_DIR     = .build/rcc

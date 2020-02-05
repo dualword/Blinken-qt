@@ -1,3 +1,4 @@
+/* Blinken-qt (2020) http://github.com/dualword/Blinken-qt License:GNU GPL*/
 /***************************************************************************
  *   Copyright (C) 2005-2006 by Albert Astals Cid <aacid@kde.org>          *
  *                                                                         *
@@ -13,7 +14,6 @@
 
 #include <QTimer>
 
-//#include <krandom.h>
 #include "soundsplayer.h"
 
 blinkenGame::blinkenGame() : m_phase(starting)

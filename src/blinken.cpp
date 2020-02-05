@@ -1,3 +1,4 @@
+/* Blinken-qt (2020) http://github.com/dualword/Blinken-qt License:GNU GPL*/
 /***************************************************************************
  *   Copyright (C) 2005-2007 by Albert Astals Cid <aacid@kde.org>          *
  *                                                                         *
@@ -20,17 +21,10 @@
 #include <QKeySequence>
 #include <QMouseEvent>
 
-//#include <kconfig.h>
-//#include <khelpmenu.h>
-//#include <kfontutils.h>
-//#include <klocalizedstring.h>
-//#include <KAboutData>
-
 #include "button.h"
 #include "counter.h"
 #include "number.h"
 #include "highscoredialog.h"
-//#include "settings.h"
 
 static const double centerX = 2.0;
 static const double centerY = 2.5;
@@ -43,9 +37,8 @@ static const double nonButtonRibbonY = 125.0;
 
 blinken::blinken() : m_overHighscore(false), m_overQuit(false), m_overCentralText(false), m_overMenu(false), m_overAboutKDE(false), m_overAboutBlinken(false), m_overSettings(false), m_overManual(false), m_overCentralLetters(false), m_overCounter(false), m_overFont(false), m_overSound(false), m_showPreferences(false), m_updateButtonHighlighting(false), m_highlighted(blinkenGame::none)
 {
-	//m_renderer = new QSvgRenderer(QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("images/blinken.svg")));
-	m_renderer = new QSvgRenderer(QStringLiteral("./images/blinken.svg"));
-	
+	m_renderer = new QSvgRenderer(QString(":/blinken.svg"));
+
 	m_buttons[0] = new button(blinkenGame::blue);
 	m_buttons[1] = new button(blinkenGame::yellow);
 	m_buttons[2] = new button(blinkenGame::red);
@@ -66,22 +59,18 @@ blinken::blinken() : m_overHighscore(false), m_overQuit(false), m_overCentralTex
 	connect(&m_game, SIGNAL(phaseChanged()), this, SLOT(update()));
 	connect(&m_game, &blinkenGame::highlight, this, &blinken::highlight);
 	
-//	m_helpMenu = new KHelpMenu(this, KAboutData::applicationData());
-//	m_helpMenu->menu(); // ensures the actions are created
-	
 	for (int i = 0; i < 3; i++) m_overLevels[i] = false;
 	
 	QString aux = tr("If the Steve font that is used by Blinken by default to show status messages does not support any of the characters of your language, please translate that message to 1 and KDE standard font will be used to show the texts, if not translate it to 0", "0");
 	
 	m_alwaysUseNonCoolFont = aux == QStringLiteral("1");
-	//setAutoSaveSettings();
+
 }
 
 blinken::~blinken()
 {
 	delete m_renderer;
 	for (int i = 0; i < 4; i++) delete m_buttons[i];
-	//delete m_helpMenu;
 }
 
 QSize blinken::sizeHint() const
@@ -366,7 +355,7 @@ void blinken::mousePressEvent(QMouseEvent *e)
 //		update();
 //	}
 	else if (m_overQuit) qApp->quit();
-//	else if (m_overAboutBlinken || m_overCentralLetters) m_helpMenu -> aboutApplication();
+	else if (m_overAboutBlinken || m_overCentralLetters) aboutApplication();
 //	else if (m_overAboutKDE) m_helpMenu -> aboutKDE();
 	else if (m_overSettings) togglePreferences();
 //	else if (m_overManual) m_helpMenu -> appHelpActivated();
@@ -696,7 +685,7 @@ void blinken::drawStatusText(QPainter &p)
 	QString text;
 	if (m_overQuit) text = tr("Quit Blinken");
 	else if (m_overHighscore || m_overCounter) text = tr("View Highscore Table");
-//	else if (m_overAboutBlinken || m_overCentralLetters) text = m_helpMenu->action( KHelpMenu::menuAboutApp )->text().remove(QLatin1Char('&'));
+	else if (m_overAboutBlinken || m_overCentralLetters) text = tr("About Blinken");
 //	else if (m_overAboutKDE) text = m_helpMenu->action( KHelpMenu::menuAboutKDE )->text().remove(QLatin1Char('&'));
 	else if (m_overSettings)
 	{
@@ -793,9 +782,9 @@ void blinken::drawStatusText(QPainter &p)
 	}
 	
 	QFont f;
-//	if (blinkenSettings::customFont() && !m_alwaysUseNonCoolFont) f = QFont(QStringLiteral("Steve"));
+	f = QFont(":/steve.ttf");
 	p.setFont(f);
-//	f.setPointSize(KFontUtils::adaptFontSize(p, text, 380, 30, 28, 1, KFontUtils::DoNotAllowWordWrap));
+	f.setPointSize(15);
 	p.setFont(f);
 	p.drawText(0, 0, text);
 }
@@ -1085,5 +1074,21 @@ QPixmap blinken::getPixmap(const QString &element, const QSize &imageSize)
 		it = m_pixmapCache.insert(element, pix);
 	}
 	return it.value();
+}
+
+void blinken::aboutApplication()
+{
+	QString str;
+	str.append("<b>Blinken-qt</b> - Qt port of KDE game Blinken. <br>");
+	str.append("Source code: <a href='http://github.com/dualword/Blinken-qt/'>Blinken-qt</a>. License: GNU General Public License. <hr/>");
+	str.append("<i>Information about Blinken:</i> <br/>");
+	str.append("Blinken version 19.12.1. A memory enhancement game. <br/>");
+	str.append("License: GNU General Public License. <br/>");
+	str.append("&copy;2005-2007 Albert Astals Cid &copy;2005-2007 Danny Allen<br/>");
+	str.append("Coding: Albert Astals Cid aacid@kde.org <br/>");
+	str.append("Design, Graphics and Sounds: Danny Allen danny@dannyallen.co.uk<br/>");
+	str.append("GPL'ed his 'Steve' font so that we could use it: Steve Jordi steve@sjordi.com <br/>");
+	QMessageBox::about(this, tr("About Blinken-qt"), str );
+
 }
 

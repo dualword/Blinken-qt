@@ -1,3 +1,4 @@
+/* Blinken-qt (2020) http://github.com/dualword/Blinken-qt License:GNU GPL*/
 /***************************************************************************
  *   Copyright (C) 2005-2006 by Albert Astals Cid <aacid@kde.org>          *
  *                                                                         *
@@ -10,18 +11,12 @@
 #ifndef BLINKEN_H
 #define BLINKEN_H
 
-#include <QMainWindow>
-#include <QStandardPaths>
-
-#include <QMap>
-//#include <kmainwindow.h>
+#include <QtWidgets>
 
 #include "blinkengame.h"
 
 class QSvgRenderer;
 class QTimer;
-
-//class KHelpMenu;
 
 class button;
 
@@ -47,6 +42,7 @@ Q_OBJECT
 		void unhighlight();
 		
 		void pressedColor(blinkenGame::color c);
+		void aboutApplication();
 
 	private:
 		void startGamePressed();
@@ -93,8 +89,6 @@ Q_OBJECT
 		QString m_lastName;
 		
 		blinkenGame m_game;
-		
-		//KHelpMenu *m_helpMenu;
 		
 		QSize m_lastSize;
 		QMap<QString, QPixmap> m_pixmapCache;

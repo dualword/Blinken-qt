@@ -1,0 +1,19 @@
+<!DOCTYPE RCC><RCC version="1.0">
+
+<qresource>
+     <file alias="blinken.svg">../images/blinken.svg</file>
+     <file alias="steve.ttf">../fonts/steve.ttf</file>
+     <file alias="1.wav">../sounds/1.wav</file>
+     <file alias="2.wav">../sounds/2.wav</file>
+     <file alias="3.wav">../sounds/3.wav</file>
+     <file alias="4.wav">../sounds/4.wav</file>
+     <file alias="lose.wav">../sounds/lose.wav</file>
+     <file alias="128-apps-blinken.png">../icons/128-apps-blinken.png</file>
+     <file alias="64-apps-blinken.png">../icons/64-apps-blinken.png</file>
+     <file alias="48-apps-blinken.png">../icons/48-apps-blinken.png</file>
+     <file alias="32-apps-blinken.png">../icons/32-apps-blinken.png</file>
+     <file alias="22-apps-blinken.png">../icons/22-apps-blinken.png</file>
+     <file alias="16-apps-blinken.png">../icons/16-apps-blinken.png</file>	
+     <file alias="sc-apps-blinken.svgz">../icons/sc-apps-blinken.svgz</file>
+ </qresource>
+</RCC>
