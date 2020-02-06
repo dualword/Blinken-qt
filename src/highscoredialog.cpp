@@ -133,7 +133,7 @@ class myTabWidget : public QTabWidget
 
 highScoreDialog::highScoreDialog(QWidget *parent, QSvgRenderer *renderer) : QDialog(parent)
 {
-	setWindowTitle(tr("window the highest scores for each level are shown", "Highscores"));
+	setWindowTitle(tr("The highest scores for each level", "Highscores"));
 
 	setLayout(new QVBoxLayout(this));
 	m_tw = new myTabWidget(this);
@@ -144,9 +144,9 @@ highScoreDialog::highScoreDialog(QWidget *parent, QSvgRenderer *renderer) : QDia
 
 	highScoreManager hsm;
 	
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(0), renderer), tr("High scores Level 1 tab title", "Level 1"));
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(1), renderer), tr("High scores Level 2 tab title", "Level 2"));
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(2), renderer), tr("High scores Level ? tab title", "Level ?"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(0), renderer), tr("Level 1", "Level 1"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(1), renderer), tr("Level 2", "Level 2"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(2), renderer), tr("Level ?", "Level ?"));
 }
 
 void highScoreDialog::showLevel(int level)
@@ -208,7 +208,6 @@ void highScoreManager::addScore(int level, int score, const QString &name)
 	
 	QSettings s;
 	s.beginGroup(QStringLiteral("Level%1").arg(level + 1));
-	int j;	
 	for (int i =0;i < m_scores[level].size();i++)
 	{
 		s.setValue(QStringLiteral("Score%1").arg(i+1), m_scores[level].at(i).first);

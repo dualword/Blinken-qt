@@ -5,4 +5,7 @@ Blinken-qt - Qt port of KDE game [Blinken](https://kde.org/applications/educatio
 License: GNU General Public License  
 Source code: http://github.com/dualword/Blinken-qt/  
 
+Third Party Software:  
+ - Qt License: LGPLv3
+ 
 ![Screenshot](screenshot.png)

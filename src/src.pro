@@ -5,6 +5,7 @@ INCLUDEPATH += .
 
 CONFIG += qt widgets thread release
 QT += svg
+#QT += phonon 
 
 QMAKE_CXXFLAGS += -std=c++11
 

@@ -402,7 +402,7 @@ void blinken::mousePressEvent(QMouseEvent *e)
 void blinken::checkHS()
 {
 	highScoreManager hsm;
-	if (hsm.scoreGoodEnough(m_game.level(), m_game.score()))
+	if (m_game.score()>0 && hsm.scoreGoodEnough(m_game.level(), m_game.score()))
 	{
 		bool ok;
 		const QString name = QInputDialog::getText(this, tr("Enter Your Name"), tr("refers to the user's name", "Name:"), QLineEdit::Normal, m_lastName, &ok);
