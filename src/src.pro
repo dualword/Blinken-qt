@@ -15,7 +15,8 @@ HEADERS += blinken.h \
            counter.h \
            highscoredialog.h \
            number.h \
-           soundsplayer.h
+           soundsplayer.h \
+           settings.h
            
 SOURCES += main.cpp \
 		   blinken.cpp \

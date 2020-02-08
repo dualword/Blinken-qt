@@ -10,6 +10,13 @@
 
 #include "highscoredialog.h"
 
+#include <QDialogButtonBox>
+#include <QPainter>
+#include <QPixmap>
+#include <QTabBar>
+#include <QTabWidget>
+#include <QVBoxLayout>
+
 #include "counter.h"
 
 static const int margin = 15;
@@ -55,9 +62,7 @@ void scoresWidget::paintEvent(QPaintEvent *)
 	
 	p.setPen(Qt::black);
 	
-	//if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
-	f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
-	p.setFont(f);
+	if (blinkenSettings::customFont()) f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	//f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
 	f.setPointSize(15);
 	p.setFont(f);
@@ -86,9 +91,7 @@ QSize scoresWidget::calcSize()
 	QPainter p(&dummyPixmap);
 	QFont f;
 	
-	//	if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
-	f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
-	p.setFont(f);
+	if (blinkenSettings::customFont()) f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	//f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
 	f.setPointSize(15);
 	p.setFont(f);

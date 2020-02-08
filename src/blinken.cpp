@@ -152,25 +152,25 @@ void blinken::paintEvent(QPaintEvent *)
 		m_soundRect = QRect(181, 197, 25, 25);
 		m_fontRect = QRect(432, 197, 25, 25);
 		p.drawRect(m_soundRect);
-//		if (blinkenSettings::playSounds())
-//		{
-//			p.drawLine(186, 202, 201, 217);
-//			p.drawLine(186, 217, 201, 202);
-//		}
-//		if (!m_alwaysUseNonCoolFont)
-//		{
-//			p.drawRect(m_fontRect);
-//			if (blinkenSettings::customFont())
-//			{
-//				p.drawLine(437, 202, 452, 217);
-//				p.drawLine(437, 217, 452, 202);
-//			}
-//		}
+		if (blinkenSettings::playSounds())
+		{
+			p.drawLine(186, 202, 201, 217);
+			p.drawLine(186, 217, 201, 202);
+		}
+		if (!m_alwaysUseNonCoolFont)
+		{
+			p.drawRect(m_fontRect);
+			if (blinkenSettings::customFont())
+			{
+				p.drawLine(437, 202, 452, 217);
+				p.drawLine(437, 217, 452, 202);
+			}
+		}
 
 		// draw the options' text
 		QFont f1 = QFont();
 		p.setFont(f1);
-		int size, sizeAux;
+		int size = 15, sizeAux = 15;
 		QRect area;
 		QString sounds = tr("Sounds");
 		QString font = tr("Font");
@@ -342,18 +342,16 @@ void blinken::mousePressEvent(QMouseEvent *e)
 		hsd->showLevel(1);
 		m_updateButtonHighlighting = true;
 	}
-//	else if (m_showPreferences && m_fontRect.contains(e -> pos()) && !m_alwaysUseNonCoolFont)
-//	{
-//		blinkenSettings::setCustomFont(!blinkenSettings::customFont());
-//		blinkenSettings::self()->save();
-//		update();
-//	}
-//	else if (m_showPreferences && m_soundRect.contains(e -> pos()))
-//	{
-//		blinkenSettings::setPlaySounds(!blinkenSettings::playSounds());
-//		blinkenSettings::self()->save();
-//		update();
-//	}
+	else if (m_showPreferences && m_fontRect.contains(e -> pos()) && !m_alwaysUseNonCoolFont)
+	{
+		blinkenSettings::setCustomFont(!blinkenSettings::customFont());
+		update();
+	}
+	else if (m_showPreferences && m_soundRect.contains(e -> pos()))
+	{
+		blinkenSettings::setPlaySounds(!blinkenSettings::playSounds());
+		update();
+	}
 	else if (m_overQuit) qApp->quit();
 	else if (m_overAboutBlinken || m_overCentralLetters) aboutApplication();
 //	else if (m_overAboutKDE) m_helpMenu -> aboutKDE();
@@ -781,8 +779,8 @@ void blinken::drawStatusText(QPainter &p)
 		}
 	}
 	
-	//	if (blinkenSettings::customFont() && !m_alwaysUseNonCoolFont) f = QFont(QStringLiteral("Steve"));
-	QFont f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
+	QFont f;
+	if (blinkenSettings::customFont() && !m_alwaysUseNonCoolFont) f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	p.setFont(f);
 	//f.setPointSize(KFontUtils::adaptFontSize(p, text, 380, 30, 28, 1, KFontUtils::DoNotAllowWordWrap));
 	f.setPointSize(20);

@@ -17,6 +17,7 @@
 #include <QTimer>
 
 #include "blinkengame.h"
+#include "settings.h"
 
 class soundsPlayer : public QObject
 {

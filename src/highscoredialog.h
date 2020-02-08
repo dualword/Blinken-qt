@@ -12,6 +12,7 @@
 #define HIGHSCOREDIALOG_H
 
 #include "blinken.h"
+#include "settings.h"
 
 class QSvgRenderer;
 
