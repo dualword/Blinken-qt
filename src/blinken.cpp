@@ -64,7 +64,7 @@ blinken::blinken() : m_overHighscore(false), m_overQuit(false), m_overCentralTex
 	QString aux = tr("If the Steve font that is used by Blinken by default to show status messages does not support any of the characters of your language, please translate that message to 1 and KDE standard font will be used to show the texts, if not translate it to 0", "0");
 	
 	m_alwaysUseNonCoolFont = aux == QStringLiteral("1");
-
+	//setAutoSaveSettings();
 }
 
 blinken::~blinken()
@@ -215,7 +215,7 @@ void blinken::paintEvent(QPaintEvent *)
 	switch (m_game.phase())
 	{
 		case blinkenGame::starting:
-			drawText(p, tr("Start a new game", "Start"), QPointF(aux1, aux2), true, aux3, aux4, &m_centralTextRect, m_overCentralText, true);
+			drawText(p, tr("Start"), QPointF(aux1, aux2), true, aux3, aux4, &m_centralTextRect, m_overCentralText, true);
 		break;
 		
 		case blinkenGame::choosingLevel:
@@ -402,17 +402,17 @@ void blinken::mousePressEvent(QMouseEvent *e)
 void blinken::checkHS()
 {
 	highScoreManager hsm;
-	if (m_game.score()>0 && hsm.scoreGoodEnough(m_game.level(), m_game.score()))
+	if (hsm.scoreGoodEnough(m_game.level(), m_game.score()))
 	{
 		bool ok;
-		const QString name = QInputDialog::getText(this, tr("Enter Your Name"), tr("refers to the user's name", "Name:"), QLineEdit::Normal, m_lastName, &ok);
+		const QString name = QInputDialog::getText(this, tr("Enter Your Name"), tr("Name:"), QLineEdit::Normal, m_lastName, &ok);
 		if (!name.isNull() && ok)
 		{
 			m_lastName = name;
 			hsm.addScore(m_game.level(), m_game.score(), name);
+			highScoreDialog *hsd = new highScoreDialog(this, m_renderer);
+			hsd->showLevel(m_game.level());
 		}
-		highScoreDialog *hsd = new highScoreDialog(this, m_renderer);
-		hsd->showLevel(m_game.level());
 	}
 }
 
@@ -781,10 +781,11 @@ void blinken::drawStatusText(QPainter &p)
 		}
 	}
 	
-	QFont f;
-	f = QFont(":/steve.ttf");
+	//	if (blinkenSettings::customFont() && !m_alwaysUseNonCoolFont) f = QFont(QStringLiteral("Steve"));
+	QFont f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	p.setFont(f);
-	f.setPointSize(15);
+	//f.setPointSize(KFontUtils::adaptFontSize(p, text, 380, 30, 28, 1, KFontUtils::DoNotAllowWordWrap));
+	f.setPointSize(20);
 	p.setFont(f);
 	p.drawText(0, 0, text);
 }
@@ -798,7 +799,7 @@ void blinken::drawLevel(QPainter &p)
 	
 	double posX = (double)width() / 2.0;
 	double posY = (double)height() / 1.868;
-	drawText(p, tr("which level is currently being played", "Level"), QPointF(posX, posY), false, 0, 0, nullptr, false, true);
+	drawText(p, tr("Level"), QPointF(posX, posY), false, 0, 0, nullptr, false, true);
 	
 	QPointF cp;
 	for (int i = 0; i < 3; i++)
@@ -1080,7 +1081,7 @@ void blinken::aboutApplication()
 {
 	QString str;
 	str.append("<b>Blinken-qt</b> - Qt port of KDE game Blinken. <br>");
-	str.append("Source code: <a href='http://github.com/dualword/Blinken-qt/'>Blinken-qt</a>. License: GNU General Public License. <hr/>");
+	str.append("Source code: <a href='http://github.com/dualword/Blinken-qt/'>Blinken-qt</a>. License: GNU GPL. <hr/>");
 	str.append("<i>Information about Blinken:</i> <br/>");
 	str.append("Blinken version 19.12.1. A memory enhancement game. <br/>");
 	str.append("License: GNU General Public License. <br/>");

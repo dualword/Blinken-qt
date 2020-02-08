@@ -10,13 +10,6 @@
 
 #include "highscoredialog.h"
 
-#include <QDialogButtonBox>
-#include <QPainter>
-#include <QPixmap>
-#include <QTabBar>
-#include <QTabWidget>
-#include <QVBoxLayout>
-
 #include "counter.h"
 
 static const int margin = 15;
@@ -62,8 +55,10 @@ void scoresWidget::paintEvent(QPaintEvent *)
 	
 	p.setPen(Qt::black);
 	
-	f = QFont(":/steve.ttf");
+	//if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
+	f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	p.setFont(f);
+	//f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
 	f.setPointSize(15);
 	p.setFont(f);
 	
@@ -91,9 +86,11 @@ QSize scoresWidget::calcSize()
 	QPainter p(&dummyPixmap);
 	QFont f;
 	
-	f = QFont(":/steve.ttf");
+	//	if (blinkenSettings::customFont()) f = QFont(QStringLiteral("Steve"));
+	f = QFont(QFontDatabase::applicationFontFamilies(0).at(0));
 	p.setFont(f);
-	f.setPointSize(25);
+	//f.setPointSize(KFontUtils::adaptFontSize(p, QStringLiteral("A"), 1000, namesFontSize, 28, 1, KFontUtils::DoNotAllowWordWrap));
+	f.setPointSize(15);
 	p.setFont(f);
 	for (int i = 0; i < 3; i++)
 	{
@@ -133,7 +130,7 @@ class myTabWidget : public QTabWidget
 
 highScoreDialog::highScoreDialog(QWidget *parent, QSvgRenderer *renderer) : QDialog(parent)
 {
-	setWindowTitle(tr("The highest scores for each level", "Highscores"));
+	setWindowTitle(tr("Highscores"));
 
 	setLayout(new QVBoxLayout(this));
 	m_tw = new myTabWidget(this);
@@ -144,9 +141,9 @@ highScoreDialog::highScoreDialog(QWidget *parent, QSvgRenderer *renderer) : QDia
 
 	highScoreManager hsm;
 	
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(0), renderer), tr("Level 1", "Level 1"));
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(1), renderer), tr("Level 2", "Level 2"));
-	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(2), renderer), tr("Level ?", "Level ?"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(0), renderer), tr("Level 1"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(1), renderer), tr("Level 2"));
+	m_tw -> addTab(new scoresWidget(nullptr, hsm.scores(2), renderer), tr("Level ?"));
 }
 
 void highScoreDialog::showLevel(int level)
@@ -180,6 +177,7 @@ highScoreManager::~highScoreManager()
 
 bool highScoreManager::scoreGoodEnough(int level, int score)
 {
+	if(score <= 0) return false;
 	if(m_scores[--level].empty()) return true;
 	QList< QPair<int, QString> >::iterator it, itEnd;
 	it = m_scores[level].begin();

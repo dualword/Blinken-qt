@@ -11,11 +11,7 @@
 #ifndef HIGHSCOREDIALOG_H
 #define HIGHSCOREDIALOG_H
 
-#include <QDialog>
-#include <QPair>
-#include <QList>
-#include <QSet>
-#include <QSettings>
+#include "blinken.h"
 
 class QSvgRenderer;
 
