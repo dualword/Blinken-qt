@@ -13,9 +13,9 @@
 int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
-	QCoreApplication::setApplicationName("Blinken-qt");
-	QCoreApplication::setOrganizationName("Blinken-qt");
-	QCoreApplication::setOrganizationDomain("Blinken-qt");
+	QCoreApplication::setApplicationName("Blinken-Qt");
+	QCoreApplication::setOrganizationName("Blinken-Qt");
+	QCoreApplication::setOrganizationDomain("Blinken-Qt");
 
 	app.setWindowIcon(QIcon(":/sc-apps-blinken.svgz"));
 

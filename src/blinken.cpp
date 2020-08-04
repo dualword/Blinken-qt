@@ -1078,7 +1078,7 @@ QPixmap blinken::getPixmap(const QString &element, const QSize &imageSize)
 void blinken::aboutApplication()
 {
 	QString str;
-	str.append("<b>Blinken-qt</b> - Qt port of KDE game Blinken. <br>");
+	str.append("<b>Blinken-Qt</b> - Qt port of KDE game Blinken. <br>");
 	str.append("Source code: <a href='http://github.com/dualword/Blinken-qt/'>Blinken-qt</a>. License: GNU GPL. <hr/>");
 	str.append("<i>Information about Blinken:</i> <br/>");
 	str.append("Blinken version 19.12.1. A memory enhancement game. <br/>");
@@ -1087,7 +1087,7 @@ void blinken::aboutApplication()
 	str.append("Coding: Albert Astals Cid aacid@kde.org <br/>");
 	str.append("Design, Graphics and Sounds: Danny Allen danny@dannyallen.co.uk<br/>");
 	str.append("GPL'ed his 'Steve' font so that we could use it: Steve Jordi steve@sjordi.com <br/>");
-	QMessageBox::about(this, tr("About Blinken-qt"), str );
+	QMessageBox::about(this, tr("About Blinken-Qt"), str );
 
 }
 
